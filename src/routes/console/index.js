@@ -11,14 +11,13 @@ import React from 'react';
 import Layout from '../../components/Layout';
 
 const title = 'User Console';
-const isAdmin = true;
 
 export default {
 
   path: '/console',
 
-  async action() {
-    if (!isAdmin) {
+  async action({context}) {
+    if (context && !context.user) {
       return { redirect: '/login' };
     }
 

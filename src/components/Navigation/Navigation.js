@@ -110,7 +110,7 @@ class Navigation extends React.Component {
             <ActionSearch />
           </IconButton>
           <ToolbarSeparator />
-          <RaisedButton label="Logout" primary />
+          <RaisedButton label="Logout" href="/logout" primary />
           <Avatar
             src={logoUrl.default}
             size={45}
